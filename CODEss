@@ -1,23 +1,63 @@
-class Ribosome:
-    def __init__(self,Name, ProteinTypes, RnaTypes):
-        self.Name = Name
-        self.ProteinTypes = ProteinTypes
-        self.RnaTypes =RnaTypes
-    
-    def func(self) :
-        print("Ribosomme Name " + self.Name)
-        print("Protein Type:" + self.ProteinTypes)
-        print("RnaTypes:" + self.RnaTypes)
-        
-        
-def RibosommeData():
-    inputLoop = input("Input the numbner of input you want ")
-    
-    for x in range(int(inputLoop)):
-        inputRibosomeNAME = input("Ribosome Name ")
-        ProteinTypes = input(str("Protein Type Present"))
-        inputRNAtypeNUM = input("how maany RNA  are there")
-        R1 = Ribosome(inputRibosomeNAME,ProteinTypes,inputRNAtypeNUM)
-    
-RibosommeData()
- 
+#include <iostream>
+#include <string>
+#include <iostream>
+using namespace std;
+
+class bankingSystem {
+private:
+    const Bank_Account_Number;
+    const FirstName[];
+    const LastName;
+    const DOB // Date of Birth
+
+public:
+    const Adress;
+    char[] AccountNUM;
+
+    bankingSystem() {
+
+
+    }
+
+    bool CreateAccount() {
+        cout << "Enter Your First name BOLD LETTER PLEASE " << endl;
+        cin >> FirstName << endl;
+        cout << "Enter Your Last name BOLD LETTER PLEASE " << endl;
+        cin >> LastName;
+        cout << "Enter Your Date of Birth BOLD LETTER PLEASE " << endl;
+        cin >> DOB;
+        hashAlgorithm(FirstName, DOB);
+        cin >> Bank_Account_Number;
+
+
+
+
+
+
+    }
+
+    int hashAlgorithm(int FirstName, int DOB) {
+        int length = sprintf(FirstName, "%s", FirstName);
+        int NameArr(length);
+        int i;
+        for (int i = 0; i < length; i++) {
+            NameArr(i) = FirstName.at(i) << endl; //get character at position i
+        }
+        for (int i = 0; i < length; i++) {
+            NameArr(i);
+        }
+
+
+
+
+    }
+
+
+}
+
+int main()
+{
+    bankingSystem S1;
+    cout << "Not Hello ";
+    return 0
+}
