@@ -1,49 +1,44 @@
 #include <iostream>
-#include <string>
 #include <iostream>
+#include <string>
 using namespace std;
 
 class bankingSystem {
 private:
-    const Bank_Account_Number;
-    const FirstName[];
-    const LastName;
-    const DOB // Date of Birth
+    string Bank_Account_Number;
+    char FirstName[30];
+    char LastName[30];
+    char DOB[20];// Date of Birth
+    string Adress;
+    int AccountNUM;
+    int letter;
 
 public:
-    const Adress;
-    char[] AccountNUM;
-
-    bankingSystem() {
-
-
-    }
 
     bool CreateAccount() {
-        cout << "Enter Your First name BOLD LETTER PLEASE " << endl;
-        cin >> FirstName << endl;
+
+        cout << "Enter Your First name BOLD LETTER PLEASE";
+        cin >> FirstName;
         cout << "Enter Your Last name BOLD LETTER PLEASE " << endl;
         cin >> LastName;
         cout << "Enter Your Date of Birth BOLD LETTER PLEASE " << endl;
         cin >> DOB;
-        hashAlgorithm(FirstName, DOB);
+
+        int hashAlgorithm(char FirstName, char DOB);
         cin >> Bank_Account_Number;
-
-
-
-
-
 
     }
 
-    int hashAlgorithm(int FirstName, int DOB) {
-        int length = sprintf(FirstName, "%s", FirstName);
-        int NameArr(length);
+    int hashAlgorithm(char fname, char DOB) {
+        int len;
+        cout << "how many letters in nyour name" << endl;
+        cin >> len;
+        int NameArr[20];
         int i;
-        for (int i = 0; i < length; i++) {
-            NameArr(i) = FirstName.at(i) << endl; //get character at position i
+        for (int i = 0; i < len; i++) {
+            NameArr(i = fname.at(i)); //get character at position i
         }
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < len; i++) {
             NameArr(i);
         }
 
@@ -53,11 +48,11 @@ public:
     }
 
 
-}
+};
 
 int main()
 {
     bankingSystem S1;
     cout << "Not Hello ";
-    return 0
+    return 0;
 }
