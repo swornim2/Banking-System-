@@ -1,58 +1,63 @@
-#include <iostream>
-#include <iostream>
-#include <string>
-using namespace std;
+//***************************************************************
+//    	THE MAIN FUNCTION OF PROGRAM
+//****************************************************************
 
-class bankingSystem {
-private:
-    string Bank_Account_Number;
-    char FirstName[30];
-    char LastName[30];
-    char DOB[20];// Date of Birth
-    string Adress;
-    int AccountNUM;
-    int letter;
-
-public:
-
-    bool CreateAccount() {
-
-        cout << "Enter Your First name BOLD LETTER PLEASE";
-        cin >> FirstName;
-        cout << "Enter Your Last name BOLD LETTER PLEASE " << endl;
-        cin >> LastName;
-        cout << "Enter Your Date of Birth BOLD LETTER PLEASE " << endl;
-        cin >> DOB;
-
-        int hashAlgorithm(char FirstName, char DOB);
-        cin >> Bank_Account_Number;
-
-    }
-
-    int hashAlgorithm(char fname, char DOB) {
-        int len;
-        cout << "how many letters in nyour name" << endl;
-        cin >> len;
-        int NameArr[20];
-        int i;
-        for (int i = 0; i < len; i++) {
-            NameArr(i = fname.at(i)); //get character at position i
-        }
-        for (int i = 0; i < len; i++) {
-            NameArr(i);
-        }
-
-
-
-
-    }
-
-
-};
 
 int main()
 {
-    bankingSystem S1;
-    cout << "Not Hello ";
-    return 0;
+	char ch;
+	int num;
+	intro();
+	do
+	{
+		system("cls");
+		cout<<"\n\n\n\tMAIN MENU";
+		cout<<"\n\n\t01. NEW ACCOUNT";
+		cout<<"\n\n\t02. DEPOSIT AMOUNT";
+		cout<<"\n\n\t03. WITHDRAW AMOUNT";
+		cout<<"\n\n\t04. BALANCE ENQUIRY";
+		cout<<"\n\n\t05. ALL ACCOUNT HOLDER LIST";
+		cout<<"\n\n\t06. CLOSE AN ACCOUNT";
+		cout<<"\n\n\t07. MODIFY AN ACCOUNT";
+		cout<<"\n\n\t08. EXIT";
+		cout<<"\n\n\tSelect Your Option (1-8) ";
+		cin>>ch;
+		system("cls");
+		switch(ch)
+		{
+		case '1':
+			write_account();
+			break;
+		case '2':
+			cout<<"\n\n\tEnter The account No. : "; cin>>num;
+			deposit_withdraw(num, 1);
+			break;
+		case '3':
+			cout<<"\n\n\tEnter The account No. : "; cin>>num;
+			deposit_withdraw(num, 2);
+			break;
+		case '4': 
+			cout<<"\n\n\tEnter The account No. : "; cin>>num;
+			display_sp(num);
+			break;
+		case '5':
+			display_all();
+			break;
+		case '6':
+			cout<<"\n\n\tEnter The account No. : "; cin>>num;
+			delete_account(num);
+			break;
+		 case '7':
+			cout<<"\n\n\tEnter The account No. : "; cin>>num;
+			modify_account(num);
+			break;
+		 case '8':
+			cout<<"\n\n\tThanks for using bank managemnt system";
+			break;
+		 default :cout<<"\a";
+		}
+		cin.ignore();
+		cin.get();
+	}while(ch!='8');
+	return 0;
 }
