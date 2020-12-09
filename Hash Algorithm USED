@@ -1,33 +1,36 @@
-#include <string>
 #include <iostream>
+#include<string>
 using namespace std;
 
-class Data {
-private:
-    int Arr[3][2][2];
-
+class ArrayData {
+private : 
+    int  arr[3][2][3];  // [Main Array num][Sub Array in each Main][element storage ]
 public:
+    int i, j, k, l;
 
-    Data() {
-        int j, l, k;
-        int z = 1;
-        for (j = 0;j <= 3;j++) {
-            for (k = 0;k <= 2;k++) {
-                for (l = 0;l <= 2;l++) {
-                    Arr[j][k][l] = z;
-                    z = z + 1;
+    ArrayData() {
+        for (j = 0;j < 3;j++) {
+            for (k = 0;k < 3;k++) {
+                for (l = 0;l < 3;l++) {
+                    cout << "Enter number  " << endl;
+                    cin >> arr[j][k][l];
+
                 }
+                cout << "Next column" << endl;
             }
-        } // end of declaration 
+            cout << "Net Row" << endl;
+
+        }
+
+        
     }
 
     void display() {
-        int a, b, c;
         for (a = 0;a < 3;a++) {
-            for (b = 0;b <= 2;b++) {
+            for (b = 0;b < 3;b++) {
                 cout << "[";
-                for (c = 0;c <= 2;c++) {
-                    cout << Arr[a][b][c] << " ";
+                for (c = 0;c < 3;c++) {
+                    cout << arr[a][b][c] << " ";
 
                 }
                 cout << "]" << endl;
@@ -35,16 +38,39 @@ public:
             cout << endl;
         }
 
-    } // end of display
+    }
+
+
 
 };
 
-int main()
-{ 
-    Data D1;
-    D1.display();
+int main() {
+    ArrayData A;
+    A.display();
 
-    return 0;
+    //int arr[3][2][3];// [Main Array num][Sub Array in each Main][element storage ]
+
+
+    int i, j, k, l;
+
 
     
+    cout << "'Your file has been inserted" << endl;
+    cout << "What options would you like to do" << endl;
+
+    // Orginal :
+    int a, b, c;
+    
+    int g;
+
+    cout << " Hello ";
+    cin >> g;
+
+
+
+
+
+
+
+    return 0;
 }
