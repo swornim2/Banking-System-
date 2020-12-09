@@ -26,6 +26,7 @@ public:
     }
 
     void display() {
+        int a, b, c;
         for (a = 0;a < 3;a++) {
             for (b = 0;b < 3;b++) {
                 cout << "[";
@@ -40,13 +41,37 @@ public:
 
     }
 
+    void search(int Snum) {
+        int a, b, c;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                cout << "[";
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] == Snum) {
+                        cout << "it is in position of Index " << a << " " << b << " " << c << " --> " << arr[a][b][c] << endl;
+                    }
+
+                }
+                cout << "]" << endl;
+            }
+            cout << endl;
+        }
+
+
+    }
+
 
 
 };
 
 int main() {
+    int input;
     ArrayData A;
     A.display();
+    cout << "Enter Number to search" << endl;
+    cin >> input;
+    A.search(input);
+
 
     //int arr[3][2][3];// [Main Array num][Sub Array in each Main][element storage ]
 
