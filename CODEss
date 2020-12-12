@@ -61,3 +61,163 @@ int main()
 	}while(ch!='8');
 	return 0;
 }
+
+
+
+
+// Other Code 
+#include <iostream>
+#include<string>
+using namespace std;
+
+class ArrayData {
+private:
+    int  arr[3][2][3];  // [Main Array num][Sub Array in each Main][element storage ]
+public:
+    int i, j, k, l;
+
+    ArrayData() {
+        for (j = 0;j < 3;j++) {
+            for (k = 0;k < 3;k++) {
+                for (l = 0;l < 3;l++) {
+                    cout << "Enter number  " << endl;
+                    cin >> arr[j][k][l];
+
+                }
+                cout << "Next column" << endl;
+            }
+            cout << "Net Row" << endl;
+
+        }
+
+
+    }
+
+    void display() {
+        int a, b, c;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                cout << "[";
+                for (c = 0;c < 3;c++) {
+                    cout << arr[a][b][c] << " ";
+
+                }
+                cout << "]" << endl;
+            }
+            cout << endl;
+        }
+
+    }
+
+    void search(int Snum) {
+        int a, b, c;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] == Snum) {
+                        cout << "it is in position of Index " << a << " " << b << " " << c << " --> " << arr[a][b][c] << endl;
+                    }
+
+                }
+                
+            }
+            cout << endl;
+        }
+
+
+    }
+
+    void max() {
+        int a, b, c;
+        int max = 0;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+              
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] > max) {
+                        max = arr[a][b][c];
+                    }
+
+                }
+                
+            }
+            cout << endl;
+        }
+        cout << "Maximum Value is " << max << endl;
+
+    }
+
+    void min() {
+        int a, b, c;
+        int min = 0;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] < min) {
+                        min = arr[a][b][c];
+                    }
+
+                }
+                
+            }
+            cout << endl;
+
+            cout << "Minimum Value is " << min << endl;
+
+        }
+
+
+    }
+};
+
+    int main() {
+        int input;
+        ArrayData A;
+        cout<<"Hello your Requested tructure has been made "<<endl;
+        cout<< "Following options are available for you" <<endl;
+        cout<< "1.Display" <<endl;
+        cout<< "2. Searh " <<endl;
+        cout<< "3.max Finder " <<endl
+		cout<< "4 min FInder " <<endl;
+		int options;
+		cin>>options;
+		switch(options) {
+			case 1: A.display(); 
+			break;			
+			Case 2:
+			A.search(TOS);
+			break;
+			Case 3: 
+			A.max();
+			break;
+			case 4: 
+			A.min();
+			break;
+		}
+            
+             
+    //    A.display();
+      //cout << "Enter Number to search" << endl;
+      //cin >> input;
+      
+      //A.search(input);
+      //A.max();
+      //A.min();
+
+     
+
+        int g;
+
+        cout << " Hello ";
+        cin >> g;
+
+
+
+
+
+
+
+        return 0;
+    }
